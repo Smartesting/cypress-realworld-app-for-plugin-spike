@@ -7,6 +7,7 @@ import codeCoverageTask from "@cypress/code-coverage/task";
 import { devServer } from "@cypress/vite-dev-server";
 import { defineConfig } from "cypress";
 import { mergeConfig, loadEnv } from "vite";
+import fetch from "cross-fetch";
 
 dotenv.config({ path: ".env.local" });
 dotenv.config();
@@ -91,12 +92,13 @@ module.exports = defineConfig({
     },
   },
   e2e: {
-    baseUrl: "http://localhost:3000",
+    baseUrl: "http://localhost:13000",
     specPattern: "cypress/tests/**/*.spec.{js,jsx,ts,tsx}",
     supportFile: "cypress/support/e2e.ts",
     viewportHeight: 1000,
     viewportWidth: 1280,
     experimentalRunAllSpecs: true,
+    experimentalInteractiveRunEvents: true,
     setupNodeEvents(on, config) {
       const testDataApiEndpoint = `${config.env.apiUrl}/testData`;
 
@@ -123,6 +125,31 @@ module.exports = defineConfig({
         "find:database"(queryPayload) {
           return queryDatabase(queryPayload, (data, attrs) => _.find(data.results, attrs));
         },
+      });
+
+      on("after:spec", (_, results) => {
+        const authKey = "a380afbf-a641-4f18-8004-6b9f13b4a61c";
+        const existingSessionId =
+          "a380afbf-a641-4f18-8004-6b9f13b4a61cc07b6a8e-d3e3-4ee7-9172-2d04e5c8b15a";
+        for (const test of results.tests) {
+          fetch(
+            `http://localhost:3000/api/tracking/${authKey}/session/${existingSessionId}/identifyTest`,
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                testName: test.title.slice(-1)[0],
+                testPath: test.title.slice(0, -1).join(" / "),
+                testDate: results.stats.startedAt,
+                testDuration: test.duration,
+                testStatus: test.state,
+                sessionId: existingSessionId,
+              }),
+            }
+          )
+            .then((res) => res.json())
+            .then((resJSON) => console.log(resJSON));
+        }
       });
 
       codeCoverageTask(on, config);
