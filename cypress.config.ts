@@ -129,8 +129,7 @@ module.exports = defineConfig({
 
       on("after:spec", (_, results) => {
         const authKey = "a380afbf-a641-4f18-8004-6b9f13b4a61c";
-        const existingSessionId =
-          "a380afbf-a641-4f18-8004-6b9f13b4a61cc07b6a8e-d3e3-4ee7-9172-2d04e5c8b15a";
+        const existingSessionId = "c07b6a8e-d3e3-4ee7-9172-2d04e5c8b15a";
         for (const test of results.tests) {
           fetch(
             `http://localhost:3000/api/tracking/${authKey}/session/${existingSessionId}/identifyTest`,
