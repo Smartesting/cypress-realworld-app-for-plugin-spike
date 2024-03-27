@@ -4,11 +4,11 @@ import GravityCollector from "@smartesting/gravity-data-collector/dist";
 export function gravityCypressPlugin(
   on: Cypress.PluginEvents,
   config: Cypress.PluginConfigOptions,
-  authKey: string | undefined
+  authKey: string
 ) {
   on("task", {
     "gravity:getAuthKey": () => {
-      return authKey ?? null;
+      return authKey;
     },
     "gravity:teardown": () => {},
   });
