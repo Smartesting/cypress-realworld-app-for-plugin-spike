@@ -127,7 +127,7 @@ module.exports = defineConfig({
         },
       });
 
-      gravityCypressPlugin(on, config, "b56c7b92-3cc3-414e-8596-057924a98e7d");
+      gravityCypressPlugin(on, config, process.env.AUTH_KEY);
 
       codeCoverageTask(on, config);
       return config;
