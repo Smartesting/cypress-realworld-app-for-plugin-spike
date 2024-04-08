@@ -4,10 +4,10 @@ import axios from "axios";
 import dotenv from "dotenv";
 import Promise from "bluebird";
 import codeCoverageTask from "@cypress/code-coverage/task";
-import {devServer} from "@cypress/vite-dev-server";
-import {defineConfig} from "cypress";
-import {loadEnv, mergeConfig} from "vite";
-import {gravityCypressPlugin} from "./gravityCypressPlugin";
+import { devServer } from "@cypress/vite-dev-server";
+import { defineConfig } from "cypress";
+import { loadEnv, mergeConfig } from "vite";
+import { gravityCypressPlugin } from "@smartesting/gravity-cypress-plugin";
 
 dotenv.config({ path: ".env.local" });
 dotenv.config();
@@ -127,9 +127,10 @@ module.exports = defineConfig({
         },
       });
 
-      if (process.env.AUTH_KEY) {
-        gravityCypressPlugin(on, config, process.env.AUTH_KEY);
-      }
+      gravityCypressPlugin(on, config, {
+        authKey: process.env.AUTH_KEY,
+        gravityServerUrl: "http://localhost:3000",
+      });
 
       codeCoverageTask(on, config);
       return config;

@@ -3063,10 +3063,17 @@
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.27.8.tgz#6667fac16c436b5434a387a34dedb013198f6e6e"
   integrity sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==
 
-"@smartesting/gravity-data-collector@^4.2.0":
+"@smartesting/gravity-cypress-plugin@https://smartesting.github.io/gravity-cypress-plugin/v0.0.1-beta-1/smartesting-gravity-cypress-plugin.tgz":
+  version "0.1.0"
+  resolved "https://smartesting.github.io/gravity-cypress-plugin/v0.0.1-beta-1/smartesting-gravity-cypress-plugin.tgz#b9624c7eb9094dd791d7d0c453dcf07287cf142b"
+  dependencies:
+    "@smartesting/gravity-data-collector" "https://smartesting.github.io/gravity-data-collector/v5.0.0-beta/smartesting-gravity-data-collector.tgz"
+    cross-fetch "^4.0.0"
+    uuid "^9.0.1"
+
+"@smartesting/gravity-data-collector@https://smartesting.github.io/gravity-data-collector/v5.0.0-beta/smartesting-gravity-data-collector.tgz":
   version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@smartesting/gravity-data-collector/-/gravity-data-collector-4.2.0.tgz#863fdc203bcf46afad817b76c795e3e4da5eac0d"
-  integrity sha512-wu9ClzsTvcVqFIYfefpSwyWJVDxIgfIgalczjKmAeNn2tNq76AFCsZFGNuwSK9zRZhUFTzpztgN4G+7gvGB1Ng==
+  resolved "https://smartesting.github.io/gravity-data-collector/v5.0.0-beta/smartesting-gravity-data-collector.tgz#2b138061cf0bc5cd3f2a7ca1322b3d7138b6cd41"
   dependencies:
     "@rrweb/types" "^2.0.0-alpha.11"
     "@types/uuid" "^8.3.4"
@@ -5741,6 +5748,13 @@ cross-fetch@^3.1.5:
   version "3.1.8"
   resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.8.tgz#0327eba65fd68a7d119f8fb2bf9334a1a7956f82"
   integrity sha512-cvA+JwZoU0Xq+h6WkMvAUqPEYy92Obet6UdKLfW60qn99ftItKjB5T+BkyWOFWe2pUyfQ+IJHmpOTznqk1M6Kg==
+  dependencies:
+    node-fetch "^2.6.12"
+
+cross-fetch@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-4.0.0.tgz#f037aef1580bb3a1a35164ea2a848ba81b445983"
+  integrity sha512-e4a5N8lVvuLgAWgnCrLr2PP0YyDOTHa9H/Rj54dirp61qXnNq46m82bRhNqIA5VccJtWBvPTFRV3TtvHUKPB1g==
   dependencies:
     node-fetch "^2.6.12"
 
@@ -12390,7 +12404,7 @@ uuid@8.3.2, uuid@^8.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
 
-uuid@^9.0.0:
+uuid@^9.0.0, uuid@^9.0.1:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.1.tgz#e188d4c8853cc722220392c424cd637f32293f30"
   integrity sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==

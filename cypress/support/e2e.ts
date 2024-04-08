@@ -2,7 +2,7 @@
 import "@cypress/code-coverage/support";
 import "./commands";
 import { isMobile } from "./utils";
-import { setupGravity, teardownGravity } from "../../gravityCypressPlugin";
+import { setupGravity, teardownGravity } from "@smartesting/gravity-cypress-plugin";
 
 beforeEach(() => {
   setupGravity();
@@ -24,5 +24,6 @@ beforeEach(() => {
   }
 });
 
-afterEach(teardownGravity);
-
+afterEach(() => {
+  teardownGravity();
+});

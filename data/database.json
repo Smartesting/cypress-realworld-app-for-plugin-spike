@@ -3,12 +3,12 @@
     {
       "id": "uBmeaz5pX",
       "uuid": "3b63b436-cacc-457a-a3e8-c962ef9838ac",
-      "firstName": "Ted",
-      "lastName": "Parisian",
+      "firstName": "New First Name",
+      "lastName": "New Last Name",
       "username": "Heath93",
       "password": "$2a$10$nSaCsTPTtbbPTnFXBH0GZu0ExpNMud3d1IuKOC/6a9gwAHkdhppeu",
-      "email": "Santos.Runte65@gmail.com",
-      "phoneNumber": "398-225-9900",
+      "email": "email@email.com",
+      "phoneNumber": "6155551212",
       "avatar": "https://avatars.dicebear.com/api/human/uBmeaz5pX.svg",
       "defaultPrivacyLevel": "public",
       "balance": 150953,
@@ -10029,15 +10029,6 @@
       "transactionId": "b8v79rSvb9A",
       "createdAt": "2023-06-13T02:30:30.394Z",
       "modifiedAt": "2024-03-07T07:43:21.049Z"
-    },
-    {
-      "id": "mUgH_fN4p",
-      "uuid": "b951dbd3-5bdf-46fa-b4df-6a8735d163e5",
-      "content": "This is my comment",
-      "userId": "uBmeaz5pX",
-      "transactionId": "fjqzbjqfkR-k",
-      "createdAt": "2024-03-27T08:20:53.383Z",
-      "modifiedAt": "2024-03-27T08:20:53.383Z"
     }
   ],
   "notifications": [
@@ -10440,26 +10431,6 @@
       "isRead": false,
       "createdAt": "2024-02-01T18:53:45.699Z",
       "modifiedAt": "2024-03-07T17:13:52.110Z"
-    },
-    {
-      "id": "bEViefrNvw",
-      "uuid": "4d86c8c2-f523-4106-ae2b-21bad260cf8a",
-      "userId": "M1ty1gR8B3",
-      "transactionId": "fjqzbjqfkR-k",
-      "commentId": "mUgH_fN4p",
-      "isRead": false,
-      "createdAt": "2024-03-27T08:20:53.384Z",
-      "modifiedAt": "2024-03-27T08:20:53.384Z"
-    },
-    {
-      "id": "_j4vLpjC1m",
-      "uuid": "dedf5af3-4951-46b5-8c6d-ce64d7a10d4d",
-      "userId": "WHjJ4qR2R2",
-      "transactionId": "fjqzbjqfkR-k",
-      "commentId": "mUgH_fN4p",
-      "isRead": false,
-      "createdAt": "2024-03-27T08:20:53.386Z",
-      "modifiedAt": "2024-03-27T08:20:53.386Z"
     }
   ],
   "banktransfers": [
