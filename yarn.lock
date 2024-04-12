@@ -3063,17 +3063,17 @@
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.27.8.tgz#6667fac16c436b5434a387a34dedb013198f6e6e"
   integrity sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==
 
-"@smartesting/gravity-cypress-plugin@https://smartesting.github.io/gravity-cypress-plugin/v0.0.1-beta-1/smartesting-gravity-cypress-plugin.tgz":
+"@smartesting/gravity-cypress-plugin@https://smartesting.github.io/gravity-cypress-plugin/v0.0.1-beta-5/smartesting-gravity-cypress-plugin.tgz":
   version "0.1.0"
-  resolved "https://smartesting.github.io/gravity-cypress-plugin/v0.0.1-beta-1/smartesting-gravity-cypress-plugin.tgz#b9624c7eb9094dd791d7d0c453dcf07287cf142b"
+  resolved "https://smartesting.github.io/gravity-cypress-plugin/v0.0.1-beta-5/smartesting-gravity-cypress-plugin.tgz#9f26e35df74228d5efecf096d141bf7af4b2fef4"
   dependencies:
-    "@smartesting/gravity-data-collector" "https://smartesting.github.io/gravity-data-collector/v5.0.0-beta/smartesting-gravity-data-collector.tgz"
+    "@smartesting/gravity-data-collector" "https://smartesting.github.io/gravity-data-collector/v6.0.0-beta/smartesting-gravity-data-collector.tgz"
     cross-fetch "^4.0.0"
     uuid "^9.0.1"
 
-"@smartesting/gravity-data-collector@https://smartesting.github.io/gravity-data-collector/v5.0.0-beta/smartesting-gravity-data-collector.tgz":
-  version "4.2.0"
-  resolved "https://smartesting.github.io/gravity-data-collector/v5.0.0-beta/smartesting-gravity-data-collector.tgz#2b138061cf0bc5cd3f2a7ca1322b3d7138b6cd41"
+"@smartesting/gravity-data-collector@https://smartesting.github.io/gravity-data-collector/v6.0.0-beta/smartesting-gravity-data-collector.tgz":
+  version "5.0.0"
+  resolved "https://smartesting.github.io/gravity-data-collector/v6.0.0-beta/smartesting-gravity-data-collector.tgz#e7c49811b6a481784916425be2cff461d4b55d0a"
   dependencies:
     "@rrweb/types" "^2.0.0-alpha.11"
     "@types/uuid" "^8.3.4"
@@ -3082,6 +3082,7 @@
     psl "^1.9.0"
     regenerator-runtime "^0.13.9"
     rrweb "^2.0.0-alpha.11"
+    rrweb-snapshot "^2.0.0-alpha.11"
     to-readable-stream "^4.0.0"
     unique-selector "^0.5.0"
     uuid "^8.3.2"
